@@ -15,3 +15,6 @@ read -s TELE_TOKEN
 export TELE_TOKEN
 ./kbot start
 ```
+
+## example
+https://t.me/dmzh_kbot
