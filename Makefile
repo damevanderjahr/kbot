@@ -4,6 +4,14 @@ VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HE
 TARGETOS=linux #linux darvin windows
 TARGETARCH=arm64 #amd64 arn64
 
+UNAME_P := $(shell uname -p)
+ifeq ($(UNAME_P),x86_64)
+	TARGETARCH=amd64
+endif
+ifneq ($(filter arm%,$(UNAME_P)),)
+	TARGETARCH:=arm64
+endif
+
 format:
 	gofmt -s -w ./
 
@@ -20,6 +28,7 @@ build: format get
 	CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -v -o kbot -ldflags "-X="github.com/damevanderjahr/kbot/cmd.appVersion=${VERSION}
 
 image:
+	@echo ${TARGETARCH}
 	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
 
 push:
@@ -38,4 +47,4 @@ arm:
 	make TARGETOS=linux TARGETARCH=arm64 build
 
 macos:
-	make TARGETOS=darwin TARGETARCH=arm64 build
+	make TARGETOS=darwin build
