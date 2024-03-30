@@ -1,5 +1,5 @@
 APP := $(shell basename $(shell git remote get-url origin))
-REGISTRY := damevanderjahr
+REGISTRY := gcr.io/damevanderjahr
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux #linux darvin windows
 TARGETARCH=arm64 #amd64 arn64
