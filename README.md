@@ -17,4 +17,12 @@ export TELE_TOKEN
 ```
 
 ## example
+
 https://t.me/dmzh_kbot
+
+## add secret for k8s helm deployment
+
+```bash
+kubectl create secret generic kbot \
+    --from-literal=token="$TELE_TOKEN"
+```
