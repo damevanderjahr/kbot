@@ -5,6 +5,9 @@ TARGETOS=linux #linux darvin windows
 TARGETARCH=arm64 #amd64 arn64
 
 UNAME_P := $(shell uname -p)
+ifeq ($(UNAME_P),unknown)
+	UNAME_P:=$(shell uname -m)
+endif
 ifeq ($(UNAME_P),x86_64)
 	TARGETARCH=amd64
 endif
