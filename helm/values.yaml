@@ -8,7 +8,7 @@ image:
   repository: "damevanderjahr/kbot"
   # pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.7-b5b4405"
+  tag: "v1.0.7-8afd11f"
   os: linux
   arch: amd64
 secret:
@@ -17,7 +17,6 @@ secret:
   key: "token"
 # securityContext:
 #   privileged: true
-
 # imagePullSecrets: []
 # nameOverride: ""
 # fullnameOverride: ""
