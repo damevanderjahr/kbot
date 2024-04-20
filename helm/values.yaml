@@ -3,21 +3,18 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-
 image:
   registry: "ghcr.io"
   repository: "damevanderjahr/kbot"
   # pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.3-335d31b"
+  tag: "v1.0.7-b5b4405"
   os: linux
   arch: amd64
-
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
   key: "token"
-
 # securityContext:
 #   privileged: true
 
