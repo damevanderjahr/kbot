@@ -5,10 +5,10 @@
 replicaCount: 1
 image:
   registry: "ghcr.io"
-  repository: "damevanderjahr/kbot"
+  repository: "damevanderjahr"
   # pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.7-10a048a"
+  tag: "v1.0.7-b5b4405"
   os: linux
   arch: amd64
 secret:
@@ -17,9 +17,11 @@ secret:
   key: "token"
 # securityContext:
 #   privileged: true
+
 # imagePullSecrets: []
 # nameOverride: ""
 # fullnameOverride: ""
+
 # serviceAccount:
 #   # Specifies whether a service account should be created
 #   create: true
