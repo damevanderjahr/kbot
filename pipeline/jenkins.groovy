@@ -14,7 +14,7 @@ pipeline {
 
                 echo "Build for arch: ${params.ARCH}"
 
-                make TARGETOS=${params.OS} TARGETARCH=${params.ARCH} build
+                sh 'make TARGETOS=${params.OS} TARGETARCH=${params.ARCH} build'
 
             }
         }
