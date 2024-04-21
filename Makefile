@@ -1,8 +1,8 @@
 APP := $(shell basename $(shell git remote get-url origin))
 REGISTRY := ghcr.io/damevanderjahr
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
-TARGETOS=linux #linux darvin windows
-TARGETARCH=arm64 #amd64 arn64
+TARGETOS=linux#linux darvin windows
+TARGETARCH=arm64#amd64 arn64
 
 UNAME_P := $(shell uname -p)
 ifeq ($(UNAME_P),unknown)
@@ -32,13 +32,13 @@ build: format get
 
 image:
 	@echo ${TARGETARCH}
-	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 push:
-	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 clean:
-	(docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH} || true) && (rm -rf kbot || true)
+	(docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH} || true) && (rm -rf kbot || true)
 
 linux: 
 	make TARGETOS=linux TARGETARCH=amd64 build
