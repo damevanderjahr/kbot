@@ -8,6 +8,9 @@ pipeline {
 
     }
     stages {
+        agent {
+            docker { image 'quay.io/projectquay/golang:1.20' }
+        }
         stage('Example') {
             steps {
                 echo "Build for platform ${params.OS}"
