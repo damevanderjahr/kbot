@@ -41,11 +41,14 @@ jobs:
 
       - name: Get version
         run: echo "VERSION=$(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Get tag
+        run: echo "TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
       
       - name: Edit variables
         uses: mikefarah/yq@master
         with:
-          cmd: yq -i '.image.tag=strenv(VERSION)' helm/values.yaml
+          cmd: yq -i '.image.tag=strenv(VERSION)' helm/values.yaml; yq -i '.version=strenv(TAG)' helm/Chart.yaml
       
       - name: Update Version
         run: |
