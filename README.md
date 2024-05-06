@@ -18,7 +18,7 @@ export TELE_TOKEN
 
 ## example
 
-https://t.me/dmzh_kbot
+[https://t.me/dmzh_kbot](https://t.me/dmzh_kbot)
 
 ## GitHub actions
 
