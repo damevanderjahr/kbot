@@ -51,3 +51,6 @@ In the both cases adding the token secret in the corresponding namespace is requ
 kubectl create secret generic kbot \
     --from-literal=token="$TELE_TOKEN"
 ```
+
+## Flux CD and infrastructure configuration
+[Separate repo](https://github.com/damevanderjahr/tf)
