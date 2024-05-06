@@ -8,7 +8,7 @@ image:
   repository: "damevanderjahr"
   # pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.7-0d13eb8"
+  tag: "v1.0.10-bebdef4"
   os: linux
   arch: amd64
 secret:
@@ -30,7 +30,6 @@ secret:
 #   # The name of the service account to use.
 #   # If not set and create is true, a name is generated using the fullname template
 #   name: ""
-
 # podAnnotations: {}
 # podLabels: {}
 
