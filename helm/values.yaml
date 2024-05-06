@@ -8,7 +8,7 @@ image:
   repository: "damevanderjahr"
   # pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.7-508a710"
+  tag: "v1.0.7-0d13eb8"
   os: linux
   arch: amd64
 secret:
@@ -20,7 +20,6 @@ secret:
 # imagePullSecrets: []
 # nameOverride: ""
 # fullnameOverride: ""
-
 # serviceAccount:
 #   # Specifies whether a service account should be created
 #   create: true
