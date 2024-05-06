@@ -8,7 +8,7 @@ image:
   repository: "damevanderjahr"
   # pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.10-bebdef4"
+  tag: "v1.0.10-4dd8cb6"
   os: linux
   arch: amd64
 secret:
@@ -32,7 +32,6 @@ secret:
 #   name: ""
 # podAnnotations: {}
 # podLabels: {}
-
 # podSecurityContext: {}
 #   # fsGroup: 2000
 
