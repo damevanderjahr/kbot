@@ -53,4 +53,5 @@ kubectl create secret generic kbot \
 ```
 
 ## Flux CD and infrastructure configuration
+
 [Separate repo](https://github.com/damevanderjahr/tf)
