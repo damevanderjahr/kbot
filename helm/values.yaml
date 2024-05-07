@@ -8,7 +8,7 @@ image:
   repository: "damevanderjahr"
   # pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.10-5d62327"
+  tag: "v1.0.10-ffac846"
   os: linux
   arch: amd64
 secret:
@@ -44,7 +44,6 @@ secret:
 # service:
 #   type: ClusterIP
 #   port: 80
-
 # ingress:
 #   enabled: false
 #   className: ""
