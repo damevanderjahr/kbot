@@ -3,8 +3,7 @@ services:
 
   # Kbot
   kbot:
-    # TODO: change
-    image: denvasyliev/kbot:v1.0.0-otel
+    image: damevandejahr/kbot:v1.0.0-otel
     environment:
       - METRICS_HOST=collector:4317
       - TELE_TOKEN=${TELE_TOKEN}
