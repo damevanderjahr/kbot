@@ -50,6 +50,9 @@ In the both cases adding the token secret in the corresponding namespace is requ
 ```bash
 kubectl create secret generic kbot \
     --from-literal=token="$TELE_TOKEN"
+
+kubectl create secret generic kbot_m \
+    --from-literal=address="$METRICS_HOST"
 ```
 
 ## Flux CD and infrastructure configuration
