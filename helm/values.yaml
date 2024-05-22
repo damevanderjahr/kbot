@@ -16,7 +16,7 @@ secret:
   env: "TELE_TOKEN"
   key: "token"
 metrics_host:
-  name: "kbot_m"
+  name: "kbot-m"
   env: "METRICS_HOST"
   key: "address"
 # securityContext:
