@@ -8,7 +8,7 @@ image:
   repository: "damevanderjahr"
   # pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.10-c7529cc"
+  tag: "v1.0.10-2764f19"
   os: linux
   arch: amd64
 secret:
@@ -82,7 +82,6 @@ metrics_host:
 #   httpGet:
 #     path: /
 #     port: http
-
 # autoscaling:
 #   enabled: false
 #   minReplicas: 1
