@@ -58,3 +58,18 @@ kubectl create secret generic kbot_m \
 ## Flux CD and infrastructure configuration
 
 [Separate repo](https://github.com/damevanderjahr/tf)
+
+## Monitoring stack
+
+Local monitoring deployment (don't forget to export TELE_TOKEN)
+
+```bash
+cd otel
+docker-compose up
+```
+
+Loki in Grafana
+![Image](doc/.data/grafana_loki.png)
+
+Prometheus in Grafana
+![Image](doc/.data/grafana_prometheus.png)
